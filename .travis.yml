@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- '10.13.0'
+addons:
+  chrome: stable
+before_install:
+- npm install -g @angular/cli
+install:
+- npm run lint
+- ng test --watch=false
+- npm install
+branches:
+  only:
+  - master
