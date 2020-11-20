@@ -24,14 +24,10 @@ describe('LayoutComponent', () => {
   });
 
   it(`should have as title 'anupbaranwal'`, () => {
-    const fixture = TestBed.createComponent(LayoutComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('anupbaranwal');
+    expect(component.title).toEqual('anupbaranwal');
   });
 
   it('should render title', () => {
-    const fixture = TestBed.createComponent(LayoutComponent);
-    fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('anupbaranwal app is running!');
   });
